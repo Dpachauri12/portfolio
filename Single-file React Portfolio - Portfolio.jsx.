@@ -2,44 +2,47 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin } from "lucide-react";
 
-// Single-file, production-ready React portfolio component using TailwindCSS.
-// How to use:
-// 1. Add TailwindCSS to your project (create-react-app, Vite, Next.js, etc.).
-// 2. Install framer-motion and lucide-react if you want the animations and icons:
-//    npm install framer-motion lucide-react
-// 3. Drop this file in your src/ folder and import it in App.jsx: import Portfolio from './Portfolio';
+// Production-ready single-file React portfolio (TailwindCSS + Framer Motion)
+// Install deps: npm install framer-motion lucide-react
+// Place this file in src/ and import in App.jsx: import Portfolio from "./Portfolio";
 
 const projects = [
   {
-    title: "Hand Gesture Recognition Game",
+    title: "Predicting Bikeshare Patterns",
     description:
-      "A Unity + React front-end that uses a webcam and a CV model to detect hand gestures and control gameplay.",
-    tech: ["React", "Unity", "TensorFlow.js"],
-    link: "#",
+      "Developed a predictive modeling system to analyze and forecast bicycle usage patterns in bike-sharing systems. Implemented CNN-based deep learning models with data preprocessing and feature engineering to improve prediction accuracy at city and station levels.",
+    tech: ["Python", "CNNs", "Predictive Modeling", "Data Analysis"],
+    link: "https://github.com/Dpachauri12/bikeshare-prediction",
   },
   {
-    title: "Placement Prep Dashboard",
+    title: "Hand Gesture Gaming Application",
     description:
-      "A dashboard to track DSA progress, daily timetable, and mock interview scores. Includes analytics and reminders.",
-    tech: ["React", "Node.js", "Chart.js"],
-    link: "#",
+      "Developing a real-time gesture-controlled gaming application using computer vision. Enabled gameplay without traditional input devices and optimized browser performance using Unity WebGL with a React-based UI.",
+    tech: ["React.js", "Unity WebGL", "Computer Vision"],
+    link: "https://github.com/Dpachauri12/hand-gesture-game",
   },
   {
-    title: "Computer Vision Intern Portfolio",
+    title: "Personal Portfolio Website",
     description:
-      "Samples of image-processing projects (edge-detection, object-tracking) and internship-ready write-ups.",
-    tech: ["Python", "OpenCV", "PyTorch"],
-    link: "#",
+      "Designed and deployed a responsive personal portfolio website using React and TailwindCSS to showcase projects, skills, and achievements with a recruiter-friendly UI.",
+    tech: ["React.js", "HTML", "CSS", "Tailwind"],
+    link: "https://github.com/Dpachauri12/portfolio",
   },
 ];
 
 const skills = [
-  "JavaScript / TypeScript",
-  "React / Next.js",
-  "C++ / DSA",
-  "Python / OpenCV",
-  "HTML & CSS (Tailwind)",
+  "C++",
+  "Java",
+  "Python",
+  "SQL (MySQL)",
+  "React.js",
+  "HTML, CSS, JavaScript",
+  "Computer Vision",
+  "CNNs & Predictive Modeling",
+  "Data Structures & OOPs",
+  "DBMS, OS, Computer Networks",
   "Git & GitHub",
+  "Unity WebGL",
 ];
 
 export default function Portfolio() {
@@ -73,9 +76,9 @@ export default function Portfolio() {
               Daksh Pachauri
             </h2>
             <p className="mt-4 text-slate-700 max-w-xl">
-              I build interactive web apps and computer vision projects. I'm a 7th
-              semester student preparing for campus placements — focused on DSA,
-              system design basics, and real-world CV applications.
+              Final-year B.Tech CSE (AI & ML) student with strong software engineering fundamentals.
+              Experienced in Python, C++, Java, SQL, React, and Computer Vision.
+              I build real-world applications and ML models for predictive analytics and interactive systems.
             </p>
 
             <div className="mt-6 flex gap-3">
@@ -91,16 +94,39 @@ export default function Portfolio() {
               >
                 See Projects
               </a>
+              <a
+                href="/Daksh_Pachauri_Resume.pdf"
+                target="_blank"
+                className="inline-flex items-center px-4 py-2 rounded-2xl border border-slate-200 bg-white text-slate-900 font-medium shadow-sm"
+              >
+                Download Resume
+              </a>
             </div>
 
             <div className="mt-6 flex items-center gap-3 text-slate-600">
-              <a href="#" aria-label="Github" className="hover:text-slate-900">
+              <a
+                href="https://github.com/Dpachauri12"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Github"
+                className="hover:text-slate-900"
+              >
                 <Github size={18} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-slate-900">
+              <a
+                href="https://www.linkedin.com/in/daksh-pachauri"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-slate-900"
+              >
                 <Linkedin size={18} />
               </a>
-              <a href="#contact" aria-label="Email" className="hover:text-slate-900">
+              <a
+                href="mailto:dakshpachauri@gmail.com"
+                aria-label="Email"
+                className="hover:text-slate-900"
+              >
                 <Mail size={18} />
               </a>
             </div>
@@ -112,13 +138,13 @@ export default function Portfolio() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-full h-56 md:h-64 rounded-xl bg-[url('https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.0.3&s=')] bg-cover bg-center" />
+            <div className="w-full h-56 md:h-64 rounded-xl bg-[url('https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=1080&auto=format&fit=crop')] bg-cover bg-center" />
             <div className="mt-4">
               <h3 className="font-semibold">Quick facts</h3>
               <ul className="mt-2 text-sm text-slate-600 space-y-1">
-                <li>📍 Based in India</li>
-                <li>🎓 7th semester student — preparing for placements</li>
-                <li>💼 Looking for internships in computer vision / web</li>
+                <li>📍 Greater Noida, UP, India</li>
+                <li>🎓 Final-year B.Tech CSE (AI & ML), 2026</li>
+                <li>💼 Seeking full-time Software Engineer / Data Analyst roles</li>
               </ul>
             </div>
           </motion.div>
@@ -128,8 +154,7 @@ export default function Portfolio() {
         <section id="projects" className="pt-8">
           <h3 className="text-2xl font-bold">Selected Projects</h3>
           <p className="mt-2 text-slate-600 max-w-2xl">
-            A curated selection of projects demonstrating full-stack web apps,
-            computer vision experiments, and placement-prep utilities.
+            Real-world machine learning and computer vision projects with production-focused implementation.
           </p>
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -156,12 +181,11 @@ export default function Portfolio() {
                 <div className="mt-4 flex items-center gap-3">
                   <a
                     href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
                     className="text-sm font-medium text-slate-900 hover:underline"
                   >
-                    View
-                  </a>
-                  <a href="#contact" className="text-sm text-slate-500">
-                    Ask about this
+                    View on GitHub
                   </a>
                 </div>
               </motion.article>
@@ -172,11 +196,16 @@ export default function Portfolio() {
         {/* Skills */}
         <section id="skills" className="mt-12">
           <h3 className="text-2xl font-bold">Skills</h3>
-          <p className="mt-2 text-slate-600 max-w-2xl">Technologies and topics I work with frequently.</p>
+          <p className="mt-2 text-slate-600 max-w-2xl">
+            Core technologies and computer science fundamentals I work with.
+          </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
             {skills.map((s) => (
-              <div key={s} className="px-3 py-2 rounded-xl bg-white border border-slate-100 shadow-sm text-sm">
+              <div
+                key={s}
+                className="px-3 py-2 rounded-xl bg-white border border-slate-100 shadow-sm text-sm"
+              >
                 {s}
               </div>
             ))}
@@ -186,25 +215,36 @@ export default function Portfolio() {
         {/* Contact */}
         <section id="contact" className="mt-16 rounded-2xl p-6 bg-white border border-slate-100 shadow-md">
           <h3 className="text-2xl font-bold">Get in touch</h3>
-          <p className="mt-2 text-slate-600">I’m happy to talk about internships, collaborations, or placement prep.</p>
+          <p className="mt-2 text-slate-600">
+            Open to full-time roles, internships, and project collaborations.
+          </p>
 
-          <form className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("Thanks for reaching out! I’ll get back to you soon.");
+            }}
+            className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4"
+          >
             <input
               aria-label="Name"
               placeholder="Your name"
-              className="col-span-1 md:col-span-1 rounded-xl border border-slate-200 p-3"
+              className="rounded-xl border border-slate-200 p-3"
             />
             <input
               aria-label="Email"
               placeholder="you@domain.com"
-              className="col-span-1 md:col-span-1 rounded-xl border border-slate-200 p-3"
+              className="rounded-xl border border-slate-200 p-3"
             />
             <textarea
               aria-label="Message"
               placeholder="Tell me what you want to work on"
               className="col-span-1 md:col-span-2 rounded-xl border border-slate-200 p-3 h-28"
             />
-            <button type="submit" className="col-span-1 md:col-span-2 inline-flex items-center justify-center px-4 py-2 rounded-2xl bg-slate-900 text-white font-medium">
+            <button
+              type="submit"
+              className="col-span-1 md:col-span-2 inline-flex items-center justify-center px-4 py-2 rounded-2xl bg-slate-900 text-white font-medium"
+            >
               Send message
             </button>
           </form>
@@ -214,8 +254,12 @@ export default function Portfolio() {
         <footer className="mt-12 py-8 text-sm text-slate-500 flex items-center justify-between">
           <div>© {new Date().getFullYear()} Daksh Pachauri — Built with React + Tailwind</div>
           <div className="flex items-center gap-4">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+            <a href="https://www.linkedin.com/in/daksh-pachauri" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+            <a href="https://github.com/Dpachauri12" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
           </div>
         </footer>
       </main>
